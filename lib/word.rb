@@ -29,4 +29,8 @@ class Word
     found_word
   end
 
+  def add_definition(definition)
+    @definitions << definition
+  end
+
 end
