@@ -1,5 +1,13 @@
 <h1>list the words</h1>
 
+<form action="/create_word" method="post">
+  <input type="text" name="name" id="name" >name
+  <button type="submit" name="button">Add Word</button>
+</form>
+
+
+<a href="/new_word">add word</a>
+
 <ul>
   <% @words.each do |word| %>
     <a href="word/<%=word.id%>"><li> <%= word.name %> </li></a>

@@ -61,3 +61,39 @@ describe 'word/:id route', {:type => :feature} do
   end
 
 end
+
+describe 'new_word route', {:type => :feature} do
+
+  before() do
+    Word.clear()
+  end
+
+  it 'should list out definitions word on index page' do
+    visit('/')
+    click_link('add word')
+    fill_in('name', with: "Roast")
+    # fill_in('definition', with: "to cook flesh")
+    click_button('Add Word')
+    expect(page).to have_content("Roast")
+  end
+
+
+end
+
+describe 'new_definition route', {:type => :feature} do
+
+  before() do
+    Word.clear()
+  end
+
+  it 'should list out definitions word on index page' do
+    visit('/')
+    click_link('add word')
+    fill_in('name', with: "Roast")
+    # fill_in('definition', with: "to cook flesh")
+    click_button('Add Word')
+    expect(page).to have_content("Roast")
+  end
+
+
+end
