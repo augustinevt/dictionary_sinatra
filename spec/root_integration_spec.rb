@@ -68,7 +68,7 @@ describe 'new_word route', {:type => :feature} do
     Word.clear()
   end
 
-  it 'should list out definitions word on index page' do
+  it 'should create and list out a new word on index page' do
     visit('/')
     click_link('add word')
     fill_in('name', with: "Roast")
@@ -86,13 +86,16 @@ describe 'new_definition route', {:type => :feature} do
     Word.clear()
   end
 
-  it 'should list out definitions word on index page' do
+  it 'should create and list out a new definitions word on /word page' do
+    new_word_one = Word.new({name: "Hello"})
+    new_word_two = Word.new({name: "Goodby"})
+    new_word_two = Word.new({name: "Maharaja"})
     visit('/')
-    click_link('add word')
-    fill_in('name', with: "Roast")
+    click_link('Maharaja')
+    fill_in('definition', with: "A high king")
     # fill_in('definition', with: "to cook flesh")
-    click_button('Add Word')
-    expect(page).to have_content("Roast")
+    click_button('Add Definition')
+    expect(page).to have_content("A high king")
   end
 
 

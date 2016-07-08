@@ -10,20 +10,22 @@ get('/') do
   erb(:index)
 end
 
+get('/new_word') do
+  erb(:new_word)
+end
+
 post('/create_word') do
   Word.new({name: params[:name]})
   redirect '/'
 end
 
-get('/new_word') do
-  erb(:new_word)
+post('/create_definition') do
+  Word.find(params[:id].to_i).add_definition(Definition.new({body: params[:definition]}))
+  redirect "word/#{params[:id].to_i}"
 end
+
 
 get('/word/:id') do
   @word = Word.find(params[:id].to_i)
-  new_definition_one = Definition.new({body: 'A greeting'})
-  new_definition_two = Definition.new({body: 'An alert'})
-  @word.add_definition(new_definition_one)
-  @word.add_definition(new_definition_two)
   erb(:word)
 end
