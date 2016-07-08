@@ -9,10 +9,6 @@ get('/') do
   erb(:index)
 end
 
-get('/new_word') do
-  erb(:new_word)
-end
-
 post('/create_word') do
   word = Word.new({name: params[:name]})
   redirect "/word/#{word.id}"
