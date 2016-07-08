@@ -15,8 +15,8 @@ get('/new_word') do
 end
 
 post('/create_word') do
-  Word.new({name: params[:name]})
-  redirect '/'
+  word = Word.new({name: params[:name]})
+  redirect "/word/#{word.id}"
 end
 
 post('/create_definition') do

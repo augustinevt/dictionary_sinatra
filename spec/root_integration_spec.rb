@@ -68,7 +68,7 @@ describe 'new_word route', {:type => :feature} do
     Word.clear()
   end
 
-  it 'should create and list out a new word on index page' do
+  it 'should create and list out a new word on word page' do
     visit('/')
     click_link('add word')
     fill_in('name', with: "Roast")
