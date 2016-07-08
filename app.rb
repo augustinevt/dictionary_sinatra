@@ -4,7 +4,6 @@ require('./lib/word.rb')
 require('./lib/definition.rb')
 also_reload('lib/**/*.rb')
 
-
 get('/') do
   @words = Word.all()
   erb(:index)
@@ -23,7 +22,6 @@ post('/create_definition') do
   Word.find(params[:id].to_i).add_definition(Definition.new({body: params[:definition]}))
   redirect "word/#{params[:id].to_i}"
 end
-
 
 get('/word/:id') do
   @word = Word.find(params[:id].to_i)

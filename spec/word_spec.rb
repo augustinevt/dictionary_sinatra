@@ -45,13 +45,10 @@ describe Word do
 
     it 'should allow to add definitions with Word#add_definition()' do
       new_word = Word.new({name: "Hello"})
-
       new_definition_one = Definition.new({body: 'A greeting'})
       new_definition_two = Definition.new({body: 'An alert'})
-
       new_word.add_definition(new_definition_one)
       new_word.add_definition(new_definition_two)
-
       expect(new_word.definitions()).to eq([new_definition_one, new_definition_two])
     end
 

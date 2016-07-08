@@ -42,7 +42,3 @@ class Word
   end
 
 end
-
-new_word_one = Word.new({name: "Hello"})
-new_word_two = Word.new({name: "Goodby"})
-new_word_two = Word.new({name: "Maharaja"})
