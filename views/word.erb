@@ -1,14 +1,19 @@
 <h1><%=@word.name%></h1>
 
-<form action="/create_definition" method="post">
-  <input type="hidden" name="id" value="<%=@word.id%>">
-  <input type="text" name="definition">
-  <button type="submit" name="button">Add Definition</button>
-</form>
+<button type="button" name="button" id="new-definition-button">ADD DEFINITION</button>
 
-<h3>definitions<h3>
+<div id="new-definition">
+  <form action="/create_definition" method="post">
+    <input type="hidden" name="id" value="<%=@word.id%>">
+    <input type="text" name="definition">
+  </form>
+</div>
 
-<%@word.definitions.each do |definition|%>
-  <li> <%= definition.body%></li>
-<%end%>
+<h3>Definitions:<h3>
+<ul>
+  <%@word.definitions.each do |definition|%>
+    <li class="definition" > <%= definition.body%> </li>
+  <%end%>
+</ul>
+
 <a href="/">Home</a>

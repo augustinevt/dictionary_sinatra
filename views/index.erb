@@ -1,12 +1,15 @@
-<h1>list the words</h1>
+<h1>DICTIONARY</h1>
 
-<form action="/create_word" method="post">
-  <input type="text" name="name" id="name" >name
-  <button type="submit" name="button">Add Word</button>
-</form>
+<button type="button" name="button" id="new-word-button">ADD WORD</button>
+
+<div id="new-word">
+  <form action="/create_word" method="post">
+    <input type="text" name="name" id="name" >
+  </form>
+</div>
 
 <ul>
   <% @words.each do |word| %>
-    <a href="word/<%=word.id%>"><li> <%= word.name %> </li></a>
+    <a href="word/<%=word.id%>"><li class="index-list"> <%= word.name %> </li></a>
   <% end %>
 </ul>

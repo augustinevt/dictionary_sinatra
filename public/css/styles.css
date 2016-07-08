@@ -1,3 +1,38 @@
 body {
   text-align: center;
+  color: orange;
+}
+
+.definition {
+  list-style: none;
+  border: solid;
+  width: 45vh;
+  margin: auto;
+  margin-top: 30px;
+  padding: 20px;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  padding: 0;
+}
+
+.index-list {
+  list-style: none;
+  width: 45vh;
+  margin: 30px auto 0 auto;
+  padding: 20px;
+  font-size: 2em;
+  font-family: monospace;
+}
+
+#new-word {
+  display:none;
+}
+
+#new-definition {
+  display:none;
 }
