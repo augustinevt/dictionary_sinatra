@@ -19,11 +19,19 @@ class Word
     @@words = []
   end
 
-  def self.find(target_word)
+  def self.find(target)
     found_word = nil
-    @@words.each do |word|
-      if word.name() == target_word
-        found_word = word
+    if target.is_a? String
+      @@words.each do |word|
+        if word.name == target
+          found_word = word
+        end
+      end
+    elsif target.is_a? Integer
+      @@words.each do |word|
+        if word.id == target
+          found_word = word
+        end
       end
     end
     found_word

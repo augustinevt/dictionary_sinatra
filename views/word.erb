@@ -1,1 +1,6 @@
-<h1>definitions</h1>
+<h1><%=@word.name%></h1>
+
+<h3>definitions<h3>
+  <% @word.definitions.each do |definition| %>
+    <li> <%= definition.body %> </li>
+  <% end %>

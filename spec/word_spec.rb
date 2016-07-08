@@ -34,6 +34,13 @@ describe Word do
       new_word_two = Word.new({name: "Maharaja"})
       expect(Word.find("Maharaja").id()).to eq(3)
     end
+
+    it 'should return one Word when an id is passed into Word#find' do
+      new_word_one = Word.new({name: "Hello"})
+      new_word_two = Word.new({name: "Goodby"})
+      new_word_two = Word.new({name: "Maharaja"})
+      expect(Word.find(3).name()).to eq('Maharaja')
+    end
   end
 
     it 'should allow to add definitions with Word#add_definition()' do
