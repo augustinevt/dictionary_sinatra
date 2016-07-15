@@ -69,6 +69,7 @@ describe 'new_word route', {:type => :feature} do
 
   it 'should create and list out a new word on word page' do
     visit('/')
+    click_button('New Word')
     fill_in('name', with: "Roast")
     click_button('Add Word')
     expect(page).to have_content("Roast")
@@ -86,6 +87,7 @@ describe 'new_definition route', {:type => :feature} do
     new_word_two = Word.new({name: "Maharaja"})
     visit('/')
     click_link('Maharaja')
+    click_button('New Definition')
     fill_in('definition', with: "A high king")
     click_button('Add Definition')
     expect(page).to have_content("A high king")

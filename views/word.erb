@@ -1,11 +1,12 @@
 <h1><%=@word.name%></h1>
 
-<button type="button" name="button" id="new-definition-button">ADD DEFINITION</button>
+<button type="button" name="button" id="new-definition-button">New Definition</button>
 
 <div id="new-definition">
   <form action="/create_definition" method="post">
     <input type="hidden" name="id" value="<%=@word.id%>">
     <input type="text" name="definition">
+    <button type="submit" name="button">Add Definition</button>
   </form>
 </div>
 

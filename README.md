@@ -6,12 +6,12 @@
 
 ## Description
 
-This app helps you keep your vocabulary.
+This app helps you keep track of your vocabulary by letting you add words and their definitions.
 
 ## Setup/Installation Requirements
 
-* Visit this [link](https://dudley-poppy-34206.herokuapp.com/)
-* Or go to [github](https://github.com/augustinevt/word_count) and clone the repository
+* Visit this [link](https://shrouded-castle-60968.herokuapp.com/)
+* Or go to [github](https://github.com/augustinevt/dictionary_sinatra) and clone the repository
 * Make sure you have all the gem dependencies bundled before running the app locally!
 
 ## Known Bugs
